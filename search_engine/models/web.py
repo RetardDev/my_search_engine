@@ -3,6 +3,9 @@ from django.db import models
 class Site(models.Model):
     url = models.URLField(unique=True)
 
+    def __str__(self):
+        return self.url
+
 class Webpage(models.Model):
     site = models.ForeignKey(Site, on_delete=models.CASCADE)
     url = models.URLField(unique=True)

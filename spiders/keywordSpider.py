@@ -50,7 +50,7 @@ class MyKeySpider(scrapy.Spider):
         tokens = word_tokenize(text_content)
         stop_words = set(stopwords('english'))
         filtered_tokens = [word for word in tokens if word.isalnum() and word.lower() not in stop_words]
-
+        filtered_tokens = [word.lower() for words in filtered_tokens]
         keyword_count = Counter(filtered_tokens)
 
         webpage = get_object_or_404(Webpage, id=webpage_id)
