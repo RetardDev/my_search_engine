@@ -14,35 +14,36 @@ Installation
 
     Open your terminal and run:
 
-    sh
-
+```
 git clone https://github.com/RetardDev/my_search_engine.git
 cd my_search_engine
+```
 
 Create a Virtual Environment
 
 Create and activate a virtual environment:
 
-sh
-
+```
 py -m venv virt_env
 virt_env\Scripts\activate
+```
 
 Install Dependencies
 
 Install the required Python packages:
 
-sh
+```
 
 pip install -r requirements.txt
+```
 
 Run the Django Development Server
 
 Start the Django server:
 
-sh
-
+```
     py manage.py runserver
+```
 
 Project Details
 
