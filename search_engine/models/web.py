@@ -2,7 +2,8 @@ from django.db import models
 
 class Site(models.Model):
     url = models.URLField(unique=True)
-
+    title = models.CharField(max_length=255, default="")
+    
     def __str__(self):
         return self.url
 
@@ -12,6 +13,9 @@ class Webpage(models.Model):
     title = models.CharField(max_length=255)
     content = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
+    
+    def __str__(self):
+        return self.url
 
 class Keyword(models.Model):
     keyword = models.CharField(max_length=255, unique=True)

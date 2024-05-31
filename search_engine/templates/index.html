@@ -1,84 +1,59 @@
-<!DOCTYPE html> 
-<html lang="en"> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google</title>
+    <link rel="icon" type="image/x-icon" href="https://www.google.com/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<script>
+     function sendGetRequest() {
+            const searchQuery = document.getElementById('search').value;
+            const url = `/search?search=${encodeURIComponent(searchQuery)}`;
+            window.location.href = url;
+          }
+    document.addEventListener("DOMContentLoaded", (event) => {
+        document.getElementById('search').addEventListener("keydown", function(event){
+            if (event.key === 'Enter'){sendGetRequest(); }
+        })
+      });
+</script>
+<body>
 
-<head> 
-	<meta charset="UTF-8"> 
-	<meta name="viewport"
-		content="width=device-width, 
-				initial-scale=1.0"> 
-	<title> Google Chrome Template </title> 
-	<link rel="stylesheet" href="style.css"> 
-	<link rel="stylesheet" href= 
-"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> 
-</head> 
+    <nav class="site-navigation">
+        <div class="header-container">
+            <a href="" class="nav-link">Gmail</a>
+            <a href="" class="nav-link">Images</a>
+            <a href=""><i class="fa fa-solid fa-flask myflask"></i></a>
+            <button class="sign-in-btn">Sign in</button>
+        </div>
+    </nav>
 
-<body> 
+    <main>
+        <img id="google_image" src="https://media.geeksforgeeks.org/wp-content/uploads/20240120152553/social-(1).png">
+        <section class="search-input-section">
+            <div class="search-input-container">
+                <img alt="google-search-btn" class="gsb" src="https://media.geeksforgeeks.org/wp-content/uploads/20240122040847/search.png">
+                <input type="text" placeholder="Search Google or type a URL" class="search-input" id="search" name="search">
+            </div>
+            <img alt="Google Mic" class="mic-icon" src="https://media.geeksforgeeks.org/wp-content/uploads/20240120153531/google-voice.png">
+        </section>
 
-	<!-- Navigation Section -->
-	<nav class="site-navigation"> 
-		<div class="header-container"> 
-			<a href="#" class="nav-link"> 
-				Gmail 
-			</a> 
-			<a href="#" class="nav-link"> 
-				Images 
-			</a> 
-			<a href=""> 
-				<i class=" fa fa-solid fa-flask myflask"></i> 
-			</a> 
-			<button class="sign-in-btn"> 
-				Sign in 
-			</button> 
-		</div> 
-	</nav> 
-
-	<!-- Main Content Section -->
-	<main> 
-		<img id="google_image" src= 
-"https://media.geeksforgeeks.org/wp-content/uploads/20240120152553/social-(1).png"> 
-
-		<!-- Search Input Section -->
-        
-		<section class="search-input-section"> 
-			
-            <div class="search-input-container"> 
-                
-				<img src= 
-"https://media.geeksforgeeks.org/wp-content/uploads/20240122040847/search.png"
-					alt="google-search-btn"
-					class="gsb"> 
-                    
-				<input type="text"
-					placeholder="Search Google or type a URL"
-					class="search-input" id="search" name="search"> 
-			</div> 
-
-			<img src= 
-"https://media.geeksforgeeks.org/wp-content/uploads/20240120153531/google-voice.png"
-				alt="Google Mic"
-				class="mic-icon"> 
-		</section> 
-
-		<!-- Buttons Section -->
-		<section class="buttons-section"> 
-            
-			<button class="google-search-btn" onclick="sendGetRequest()" type="submit"> 
+        <section class="buttons-selection">
+            <button class="google-search-btn" onclick="sendGetRequest()" type="submit"> 
 				Google Search 
 			</button> 
-			<button class="feeling-lucky-btn"> 
-				I'm Feeling Lucky 
-			</button>
-       
-		</section> 
+            <button class="feeling-lucky-btn">I'm Feeling Lucky</button>
+        </section>
 
-		<div class="customize_size"> 
-			<i class="fa fa-solid fa-pen"></i> 
-			Customize Chrome 
-		</div> 
-	</main> 
-</body> 
-<style>/* style.css */
-    * { 
+        <div class="customize_size"><i class="fa fa-solid fa-pen">Customize Chrome</i></div>
+
+    </main>
+    
+</body>
+<style>
+     * { 
         text-decoration: none; 
     } 
     
@@ -239,13 +214,6 @@
     .gsb { 
         height: 20px; 
     }
-    </style>
-<script>
-  function sendGetRequest() {
-    const searchQuery = document.getElementById('search').value;
-    const url = `/search?search=${encodeURIComponent(searchQuery)}`;
-    window.location.href = url;
-  }
-</script>
+</style>
 
 </html>
