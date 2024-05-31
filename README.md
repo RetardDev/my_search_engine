@@ -10,9 +10,9 @@ Prerequisites
 
 Installation
 
-    Clone the Repository
+Clone the Repository
 
-    Open your terminal and run:
+Open your terminal and run:
 
 ```
 git clone https://github.com/RetardDev/my_search_engine.git
@@ -49,22 +49,22 @@ Project Details
 
 This project contains three main spiders in the spiders folder:
 
-    keyword_spider
-        Extracts keywords from webpages stored in the database.
-        Uses Scrapy for web scraping and NLTK for filtering important words.
+keyword_spider
+    - Extracts keywords from webpages stored in the database.
+    - Uses Scrapy for web scraping and NLTK for filtering important words.
 
-    site_spider
-        Adds sites from a predefined list.
-        The list is provided in a text file containing 1000 website URLs.
+site_spider
+    - Adds sites from a predefined list.
+    - The list is provided in a text file containing 1000 website URLs.
 
-    webpage_spider
-        Scrapes a site for links (a href) and saves them to the database.
-        Also collects the title of each webpage.
+webpage_spider
+    - Scrapes a site for links (a href) and saves them to the database.
+    - Also collects the title of each webpage.
 
 Additional Information
 
-    The credentials for the Django admin portal are provided in the admin.txt file.
-    Ensure you follow all the setup instructions carefully for a smooth setup process.
+The credentials for the Django admin portal are provided in the admin.txt file.
+Ensure you follow all the setup instructions carefully for a smooth setup process.
 
 Enjoy!
 
