@@ -42,16 +42,17 @@ Run the Django Development Server
 Start the Django server:
 
 ```
-    py manage.py runserver
+py manage.py runserver
 ```
 
 Project Details
 
 This project contains three main spiders in the spiders folder:
 
-keyword_spider
-    - Extracts keywords from webpages stored in the database.
-    - Uses Scrapy for web scraping and NLTK for filtering important words.
+keyword_spider:
+- Extracts keywords from webpages stored in the database.    
+    
+- Uses Scrapy for web scraping and NLTK for filtering important words.
 
 site_spider
     - Adds sites from a predefined list.
