@@ -54,13 +54,15 @@ keyword_spider:
     
 - Uses Scrapy for web scraping and NLTK for filtering important words.
 
-site_spider
-    - Adds sites from a predefined list.
-    - The list is provided in a text file containing 1000 website URLs.
+site_spider:
+ - Adds sites from a predefined list.
+    
+- The list is provided in a text file containing 1000 website URLs.
 
-webpage_spider
-    - Scrapes a site for links (a href) and saves them to the database.
-    - Also collects the title of each webpage.
+webpage_spider:
+- Scrapes a site for links (a href) and saves them to the database.
+    
+- Also collects the title of each webpage.
 
 Additional Information
 
